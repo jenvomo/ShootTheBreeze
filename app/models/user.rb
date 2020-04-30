@@ -14,13 +14,12 @@
 
 class User < ApplicationRecord
   validates :email, presence: true
-  validate :ensure_session_token
 
   has_many :messages,
     foreign_key: :author_id,
-    class: :Message
+    class_name: :Message
 
   has_many :owned_rooms,
     foreign_key: :owner_id,
-    class: :Room
+    class_name: :Room
 end

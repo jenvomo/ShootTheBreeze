@@ -15,7 +15,7 @@ class Room < ApplicationRecord
 
   belongs_to :owner,
     foreign_key: :owner_id,
-    class: :User
+    class_name: :User
 
   has_many :messages
 end
