@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: rooms
+#
+#  id         :bigint           not null, primary key
+#  title      :string
+#  owner_id   :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  owner_id: 1
+
+two:
+  title: MyString
+  owner_id: 1
