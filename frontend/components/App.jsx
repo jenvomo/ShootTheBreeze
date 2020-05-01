@@ -4,7 +4,8 @@ import RoomShowContainer from './rooms/RoomShowContainer';
 import { Provider } from 'react-redux';
 
 const App = ({store}) => (
-  <div>Let's chat!
+  <div className="app">
+    <h1>ShootTheBreeze</h1>
     <Provider store={store}>
       <HashRouter>
         <Route path="/room/:roomId" component={RoomShowContainer} />

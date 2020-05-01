@@ -14,7 +14,11 @@ const MessageForm = props => {
       })
   }, [])
 
-  const [message, setMessage] = useState({ body: "", room_id: 1, author_id: 1 });
+  const [message, setMessage] = useState({ 
+      body: "", 
+      room_id: props.roomId, 
+      author_id: 1 
+    });
 
   function handleSubmit(e) {
     e.preventDefault();

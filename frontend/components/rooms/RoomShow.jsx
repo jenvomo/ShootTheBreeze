@@ -10,7 +10,9 @@ function RoomShow(props) {
   return (
     <div>{props.room ? props.room.title : ""}
       <MessageIndex messages={props.messages} />
-      <MessageForm receiveMessage={props.receiveMessage} />
+      <MessageForm 
+        roomId={props.match.params.roomId}
+        receiveMessage={props.receiveMessage} />
     </div>
   )
 }

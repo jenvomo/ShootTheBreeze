@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-User.create(full_name: "Jen VM", display_name: "Jen", email: "jen@jen.com")
+user = User.create(full_name: "Jen VM", display_name: "Jen", email: "jen@jen.com")
 
 Room.destroy_all
-Room.create(owner_id: 1, title: "OurRoom")
+Room.create(owner_id: user.id, title: "OurRoom")
