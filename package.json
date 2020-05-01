@@ -1,5 +1,5 @@
 {
-  "name": "shoot-that-breeze",
+  "name": "ShootTheBreeze",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.9.6",
