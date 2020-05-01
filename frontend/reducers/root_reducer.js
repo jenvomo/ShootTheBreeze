@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import roomsReducer from '../reducers/rooms_reducer';
+import entitiesReducer from './entities_reducer';
 
 const rootReducers = combineReducers({
-  rooms: roomsReducer
+  entities: entitiesReducer
 })
 
 export default rootReducers;

@@ -1,4 +1,10 @@
 class Api::RoomsController < ApplicationController
+
+  def show
+    @room = Room.find_by(id: params[:id])
+    render :show
+  end
+  
   def index
     @rooms = Room.all
     render json: :index

@@ -1,12 +1,12 @@
-import { RECEIVE_ROOM } from "../components/actions/room_actions";
+import { RECEIVE_ROOM } from "../actions/room_actions";
 
-const rootReducers = (state = {}, action) => {
+const roomsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_ROOM:
-      return action.room;
+      return action.data.room;
     default:
       return state;
   }
 }
 
-export default rootReducers;
+export default roomsReducer;

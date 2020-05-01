@@ -3,7 +3,7 @@ import { Route, HashRouter } from 'react-router-dom';
 import RoomShowContainer from './rooms/RoomShowContainer';
 import { Provider } from 'react-redux';
 
-const App = (state) => (
+const App = ({store}) => (
   <div>Let's chat!
     <Provider store={store}>
       <HashRouter>

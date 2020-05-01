@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import MessageIndex from "../messages/MessageIndex";
+import MessageForm from '../messages/MessageForm';
 
-class RoomShow extends React.Component {
-  componentDidMount() {
-    debugger
-    this.props.fetchRoom(this.props.match.location);
-  }
+function RoomShow(props) {
+  useEffect(() => {
+    props.fetchRoom(props.match.params.roomId);
+  }, [])
   
-  render() {
-    return (
-      <input></input>
-    )
-  }
+  return (
+    <div>{props.room ? props.room.title : ""}
+      <MessageIndex messages={props.messages} />
+      <MessageForm receiveMessage={props.receiveMessage} />
+    </div>
+  )
 }
 
 export default RoomShow;
