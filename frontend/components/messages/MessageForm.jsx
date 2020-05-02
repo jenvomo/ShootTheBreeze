@@ -6,9 +6,11 @@ const MessageForm = props => {
       { channel: "RoomChannel" },
       {
         received: (message) => {
+          debugger
           props.receiveMessage(message)
         },
         speak: function (data) {
+          debugger
           return this.perform("speak", data)
         }
       })

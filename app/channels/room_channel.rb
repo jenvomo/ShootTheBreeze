@@ -13,6 +13,7 @@ class RoomChannel < ApplicationCable::Channel
         author_id: message.author_id,
         created_at: message.created_at
       }
+      debugger
       RoomChannel.broadcast_to('room_channel', data )
     end
   end

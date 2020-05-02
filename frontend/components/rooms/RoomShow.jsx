@@ -6,6 +6,8 @@ function RoomShow(props) {
   useEffect(() => {
     props.fetchRoom(props.match.params.roomId);
   }, [])
+
+  debugger
   
   return (
     <div>{props.room ? props.room.title : ""}
